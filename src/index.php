@@ -1,10 +1,13 @@
 <html>
    
    <head>
-      <title>Add New Record in MySQL Database</title>
+      <title>Welcome to ghanem test</title>
    </head>
    
    <body>
+      
+ <h3> welcome to ghanem test</h3>     
+ 
 <?php
 $servername = "mysql"; # service name
 $username = "db_user";
