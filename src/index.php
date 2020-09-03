@@ -1,20 +1,32 @@
 <html>
    
    <head>
-      <title>Add New Record in MySQL Database</title>
+      <title>ghanem</title>
    </head>
    
    <body>
+         <h>
+      ghanem
+   </h>
       <?php
-         if(isset($_POST['add'])) {
-            $dbhost = 'localhost:3036';
-            $dbuser = 'root';
-            $dbpass = 'rootpassword';
-            $conn = mysql_connect($dbhost, $dbuser, $dbpass);
-            
-            if(! $conn ) {
-               die('Could not connect: ' . mysql_error());
-            }
+$servername = "mysql"; # service name
+$username = "db_user";
+$password = "ghanem";
+$dbname="ghanem";
+// Create connection
+$conn = new mysqli($servername, $username, $password);
+// Check connection
+if ($conn->connect_error) {
+  die("Connection failed: " . $conn->connect_error);
+}
+
+// Create database
+$sql = "CREATE DATABASE ghanem";
+if ($conn->query($sql) === TRUE) {
+  echo "Database created successfully";
+} else {
+  echo "Error creating database: " . $conn->error;
+}
             
             if(! get_magic_quotes_gpc() ) {
                $emp_name = addslashes ($_POST['emp_name']);
