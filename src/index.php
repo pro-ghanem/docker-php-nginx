@@ -40,11 +40,13 @@ if ($conn->query($sql) === TRUE) {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
      
-
-      <h2>now okay</h2>
-     
 $conn->close();
-?>
+?>      
+
+      
+  <h2>now okay</h2>
+     
+
    
    </body>
 </html>
