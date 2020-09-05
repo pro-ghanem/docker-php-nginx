@@ -31,7 +31,7 @@ if ($conn->query($sql) === TRUE) {
       
 
 $sql = "INSERT INTO MyGuests (firstname, lastname, email)
-VALUES ('John', 'Doe', 'john@example.com')";
+VALUES ('ahmed', 'ghanem', 'pro.ahmedghanem@gmail.com')";
 
 if ($conn->query($sql) === TRUE) {
   $last_id = $conn->insert_id;
@@ -40,11 +40,11 @@ if ($conn->query($sql) === TRUE) {
   echo "Error: " . $sql . "<br>" . $conn->error;
 }
      
+
+      <h2>now okay</h2>
      
 $conn->close();
 ?>
-      <h2>now okay</h2>
-
    
    </body>
 </html>
