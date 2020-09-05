@@ -13,8 +13,9 @@ $servername = "mysql"; # service name
 $username = "db_user";
 $password = "ghanem";
 $dbname="mydb";
+
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+$conn = new mysqli($servername, $username, $password, $dbname);
 // Check connection
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
@@ -27,14 +28,7 @@ if ($conn->query($sql) === TRUE) {
 } else {
   echo "Error creating database: " . $conn->error;
 }
-
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
+      
 
 $sql = "INSERT INTO MyGuests (firstname, lastname, email)
 VALUES ('John', 'Doe', 'john@example.com')";
@@ -49,6 +43,8 @@ if ($conn->query($sql) === TRUE) {
      
 $conn->close();
 ?>
+      <h2>now okay</h2>
+
    
    </body>
 </html>
